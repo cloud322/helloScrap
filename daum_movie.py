@@ -36,22 +36,22 @@ for i in range(1, 21):
         #print(" ".join(title.text.strip().split()))
         movie_rank.append(" ".join(title.text.strip().split()))
 #title
-findkey = 'a["class=link_g"]'
-for title in soup.select(findkey):
+    findkey = 'a["class=link_g"]'
+    for title in soup.select(findkey):
     #print(title.text.strip())
-    movie_title.append(title.text.strip())
+        movie_title.append(title.text.strip())
 
 #평점
-findkey = 'em["class=emph_grade"]'
-for title in soup.select(findkey):
-    #print(title.text.strip()) + "/10"
-    movie_grade.append(title.text.strip())
+    findkey = 'em["class=emph_grade"]'
+    for title in soup.select(findkey):
+        #print(title.text.strip()) + "/10"
+        movie_grade.append(title.text.strip())
 
 #개봉일
-findkey = 'dl["class=list_state"]'
-for title in soup.select(findkey):
-    #print(title.select('dd')[0].text)
-    movie_opdate.append(title.select('dd')[0].text)
+    findkey = 'dl["class=list_state"]'
+    for title in soup.select(findkey):
+        #print(title.select('dd')[0].text)
+        movie_opdate.append(title.select('dd')[0].text)
 
 
 #출력
